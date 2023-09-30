@@ -20,6 +20,8 @@ public struct FinnCommonBarChartView: UIViewRepresentable {
 
     public func makeUIView(context: Context) -> CommonBarChartView {
         let chart = store.barChart
+        let marker = CommonMarkerView()
+        chart.marker = marker
         chart.setupView()
 
         return chart
