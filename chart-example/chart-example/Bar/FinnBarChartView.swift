@@ -13,7 +13,7 @@ struct FinnBarChartView: View {
 
     var body: some View {
         VStack {
-            FinnCommonBarChartView(store: barChartVM)
+            FinnCommonBarChartView(viewModel: barChartVM)
                 .onReceive(vm.onUpdateBarChartData) { dataSet in
                     barChartVM.setDataSetBarChart([dataSet])
                     barChartVM.setVisibleXRangeMaximum(x: 7.0)

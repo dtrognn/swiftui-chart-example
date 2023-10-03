@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("dadasd")
+            FinnLineChartView()
                 .tabItem {
                     Image("line-chart").renderingMode(.template)
                         .background(Color.red)

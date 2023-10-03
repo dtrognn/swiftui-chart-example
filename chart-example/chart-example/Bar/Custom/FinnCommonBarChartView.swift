@@ -12,14 +12,14 @@ import SwiftUI
 public struct FinnCommonBarChartView: UIViewRepresentable {
     public typealias UIViewType = CommonBarChartView
 
-    @ObservedObject var store: FinnCommonBarChartVM
+    @ObservedObject var viewModel: FinnCommonBarChartVM
 
-    public init(store: FinnCommonBarChartVM) {
-        self.store = store
+    public init(viewModel: FinnCommonBarChartVM) {
+        self.viewModel = viewModel
     }
 
     public func makeUIView(context: Context) -> CommonBarChartView {
-        let chart = store.barChart
+        let chart = viewModel.barChart
         let marker = CommonMarkerView()
         chart.marker = marker
         chart.setupView()
